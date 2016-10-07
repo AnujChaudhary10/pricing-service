@@ -1,0 +1,5 @@
+com/service/pricing/product/catalogue/config/SpringConfig.class
+com/service/pricing/controller/PriceServiceController.class
+com/service/pricing/service/PriceServiceImpl.class
+com/service/pricing/dto/ProductPriceDTO.class
+com/service/pricing/service/PriceService.class
