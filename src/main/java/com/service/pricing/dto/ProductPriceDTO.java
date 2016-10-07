@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class ProductPriceDTO implements Serializable {
 	
 	private static final long serialVersionUID = 187096500713991852L;
+	private String productName;
 	private Integer productId;
 	private Double price;
 
@@ -25,6 +26,14 @@ public class ProductPriceDTO implements Serializable {
 
 	public void setPrice(Double price) {
 		this.price = price;
+	}
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
 	}
 
 	@Override

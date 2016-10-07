@@ -45,6 +45,8 @@ public class PriceServiceImpl implements PriceService {
 				}, criteria.get("productType"), criteria.get("productName"));
 		Set<ProductPriceDTO> products = response.getBody();
 		for (ProductPriceDTO product : products) {
+			ProductPriceDTO productPriceDTO = cache.getValue(product.getProductId());
+			productPriceDTO.setProductName(product.getProductName());
 			productPrice.add(cache.getValue(product.getProductId()));
 		}
 		return productPrice;
