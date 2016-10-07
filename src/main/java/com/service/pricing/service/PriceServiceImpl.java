@@ -84,7 +84,7 @@ public class PriceServiceImpl implements PriceService {
 				new ParameterizedTypeReference<Set<ProductPriceDTO>>() {
 				});
 		for (ProductPriceDTO product : products) {
-			if (response.getBody().contains(product)) {
+			if (!response.getBody().contains(product)) {
 				isValidProduct = false;
 				break;
 			}
